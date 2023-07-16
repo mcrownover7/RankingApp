@@ -10,16 +10,16 @@ namespace RankingApp.Controllers
     {
         private static readonly IEnumerable<ItemModel> Items = new[]
         {
-            new ItemModel{Id = 1, Title = "The Godfather", ImageId = 1, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 2, Title = "Highlander", ImageId = 2, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 3, Title = "Highlander II", ImageId = 3, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 4, Title = "The Last of the Mohicans", ImageId = 4, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 5, Title = "Police Academy 6", ImageId = 5, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 6, Title = "Rear Window", ImageId = 6, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 7, Title = "Road House", ImageId = 7, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 8, Title = "The Shawshank Redemption", ImageId = 8, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 9, Title = "Star Treck IV", ImageId = 9, Ranking = 0,ItemType = 1 },
-            new ItemModel{Id = 10, Title = "Superman 4", ImageId = 10, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 1, Title = "Spirited Away", ImageId = 1, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 2, Title = "My Neighbor Totoro", ImageId = 2, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 3, Title = "Princess Mononoke", ImageId = 3, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 4, Title = "Pom Poko", ImageId = 4, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 5, Title = "Howl's Moving Castle", ImageId = 5, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 6, Title = "Kiki's Delivery Service", ImageId = 6, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 7, Title = "Grave of the Fireflies", ImageId = 7, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 8, Title = "Porco Rosso", ImageId = 8, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 9, Title = "Ponyo", ImageId = 9, Ranking = 0,ItemType = 1 },
+            new ItemModel{Id = 10, Title = "The Tale of the Princess Kaguya", ImageId = 10, Ranking = 0,ItemType = 1 },
             new ItemModel{Id = 11, Title = "Abbey Road", ImageId = 11, Ranking = 0,ItemType = 2 },
             new ItemModel{Id = 12, Title = "Adrenalize", ImageId = 12, Ranking = 0,ItemType = 2 },
             new ItemModel{Id = 13, Title = "Back in Black", ImageId = 13, Ranking = 0,ItemType = 2 },
@@ -36,6 +36,7 @@ namespace RankingApp.Controllers
         public ItemModel[] Get(int itemType)
         {
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
+            System.Threading.Thread.Sleep(2000);
             return items;
         }
     }
